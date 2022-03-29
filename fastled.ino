@@ -11,26 +11,26 @@ CRGB leds[NUM_LEDS];
 void setup() {
   Serial.begin(9600);
   FastLED.addLeds<WS2812, PIN_RBGLED>(leds, NUM_LEDS);
-  FastLED.setBrightness(50); 
+  FastLED.setBrightness(60); 
   }
 
 void loop() {
-  leds[0] = CRGB::Red;
+  leds[0] = CHSV(25, 255, 255); //orange
   FastLED.show();
   delay(500);
-  leds[0] = CRGB::Black;
+  leds[0] = CHSV(0, 0, 0);
   FastLED.show();
   delay(500);
-  leds[0] = CRGB::Green;
+  leds[0] = CHSV(96, 255, 255); //green
   FastLED.show();
   delay(500);
-  leds[0] = CRGB::Black;
+  leds[0] = CHSV(0, 0, 0);
   FastLED.show();
   delay(500);
-  leds[0] = CRGB::Blue;
+  leds[0] = CHSV(192, 255, 255); //purple
   FastLED.show();
   delay(500);
-  leds[0] = CRGB::Black;
+  leds[0] = CHSV(0, 0, 0);
   FastLED.show();
   delay(500);
 }
